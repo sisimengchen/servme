@@ -1,0 +1,12 @@
+{
+    "parser": "babel-eslint",
+    "extends": "lmfe",
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "parserOptions": {
+      "sourceType": "module"
+    }
+  }
+  

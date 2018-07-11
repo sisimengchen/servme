@@ -1,0 +1,8 @@
+html {
+    overflow: hidden;
+}
+
+#framePage {
+    height: 667px;
+    overflow: hidden;
+}

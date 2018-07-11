@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>
+    <%= meta.title || "前端开放平台" %>
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="keywords" content="立马理财前端组, 页面制作工具, UI组件, 前端">
+
+  <link rel="dns-prefetch" href="https://www.lmlc.com/">
+  <link rel="stylesheet" href="/static/common/style/fontawesome-all.min.css">
+  <link rel="stylesheet" href="/static/common/style/style.css">
+
+  <% css.forEach(function(item) { %>
+    <link rel="stylesheet" href="<%= item %>">
+    <% }); %>
+      <script type="text/javascript" src="/static/common/js/jquery.min.js"></script>
+      <script type="text/javascript" src="/static/common/js/jquery-migrate.min.js"></script>
+      <script type="text/javascript" src="/static/common/js/common.js"></script>
+      <script type="text/javascript" src="/static/common/js/inview.js"></script>
+      <script type="text/javascript" src="/static/common/js/socket.io.js"></script>
+      <% js.forEach(function(item) { %>
+        <script type="text/javascript" src="<%= item %>"></script>
+        <% }); %>
+          <style type="text/css">
+            body {
+              margin: 0;
+              overflow: auto;
+            }
+
+          </style>
+</head>
+
+<body class="<%= bodyClass %>">
+  <div class="wrap">
+    <header>
+      <h1 class="logo">
+        <a href="/">
+        </a>
+      </h1>
+
+      <div class="navBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav class="gNavi">
+        <ul>
+          <li>
+            <a href="/">首页</a>
+          </li>
+          <li>
+            <a href="/pagemaker">页面制作</a>
+          </li>
+          <li>
+            <a href="/lmui">UI组件</a>
+          </li>
+          <li>
+            <a href="/about">关于</a>
+          </li>
+          <% if (locals.user) { %>
+          <li>
+            <a href="/user">个人中心</a>
+          </li>
+          <% } %>
+        </ul>
+      </nav>
+    </header>

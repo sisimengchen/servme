@@ -1,0 +1,498 @@
+/*  重设各标签默认样式 */
+
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* HTML5 媒体文件跟 img 保持一致 */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/* 去掉各Table  cell 的边距并让其边重合 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* IE bug fixed: th 不继承 text-align*/
+th {
+  text-align: inherit;
+}
+
+/* 去除默认边框 */
+fieldset,
+img {
+  border: 0;
+}
+
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe {
+  display: block;
+}
+
+/* 去掉 firefox 下此元素的边框 */
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+/* 一致的 del 样式 */
+del {
+  text-decoration: line-through;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var,
+i,
+b {
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* 去掉列表前的标识, li 会继承 */
+ol,
+ul {
+  list-style: none;
+}
+
+/* 来自yahoo, 让标题都自定义, 适应多个系统应用 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b {
+  font-size: 100%;
+  font-weight: 500;
+}
+
+q:before,
+q:after {
+  content: "";
+}
+
+/* 统一上标和下标 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* 原有reset，上下居中显示，并恢复正确的inline-block */
+img,
+input,
+select {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* 去掉flash的虚线 */
+embed,
+object {
+  outline: none;
+}
+
+/* 为运行 Windows 8 的设备上的 Internet Explorer 10 触摸式浏览设置默认行为 */
+canvas {
+  -ms-touch-action: double-tap-zoom;
+}
+
+/*唯一元素noScript*/
+noscript {
+  position: relative;
+  display: block;
+  z-index: 999999;
+  background: #fff8db;
+  color: #333;
+  line-height: 34px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+noscript a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/*IE9以下提示条*/
+.m-browserupdate {
+  background: #fff8db;
+  color: #333;
+  line-height: 34px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.m-browserupdate a {
+  text-decoration: underline;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+html,
+body {
+  font: 14px Arial, Helvetica, sans-serif;
+  color: #666;
+  background-color: #eee;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+a,
+a:focus {
+  color: inherit;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+input,
+select,
+textarea {
+  font: 14px Arial, Helvetica, sans-serif;
+  color: #666;
+  outline: none;
+}
+
+textarea.fixAndroidKeyboard:focus,
+input.fixAKeyboard:focus {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-user-modify: read-write-plaintext-only;
+}
+
+#main {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  #main {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+}
+
+#main section a {
+  display: block;
+}
+
+#main #scroller {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+#main .image {
+  position: relative;
+}
+
+#main .image img {
+  width: 100%;
+  display: block;
+}
+
+#main .image p {
+  position: absolute;
+  bottom: 0;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  width: 100%;
+  text-align: center;
+  background: #666;
+  color: #fff;
+  opacity: 0.6;
+}
+
+/* #main .button a {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  border: 0;
+  border-radius: 4px;
+  padding: 0;
+} */
+
+#main .textbody {
+  border-radius: 0;
+  line-height: 1.5;
+
+  p {
+    text-indent: 0;
+  }
+}
+
+#main .textbody.borderRadius {
+  border-radius: 0.5rem;
+}
+
+#main .textbody.retract p {
+  text-indent: 2em;
+}
+
+#main .textbody.bigLH {
+  line-height: 1.83;
+}
+
+#main .textbody.bigPD p {
+  margin-bottom: 10px;
+}
+
+/* #main .textbody a {
+  text-decoration: underline;
+} */
+
+/* #main .textbody.noUL a {
+  text-decoration: none;
+} */
+
+#main .bottomfloat {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 97;
+}
+
+#main .bottomfloat img {
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+#main .swiper-container {
+  width: 100%;
+}
+
+#main .swiper-container img {
+  width: 100%;
+}
+
+#main .imagegird li {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#main .imagegird li p {
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+#main .imagegird.horizontal2 li:after {
+  content: "";
+  display: block;
+  height: 0;
+  visibility: none;
+  clear: both;
+}
+
+#main .imagegird.horizontal2 li .have-link,
+#main .imagegird.horizontal2 li p {
+  display: block;
+  width: 50%;
+  float: left;
+}
+
+#main .imagegird li .have-link img {
+  width: 100%;
+}
+
+#main .imagegird.horizontal2 li img {
+  width: 50%;
+  float: left;
+}
+
+#main .imagegird.vertical2 li,
+#main .imagegird.horizontal2 li {
+  width: 50%;
+}
+
+#main .imagegird.vertical2 li .have-link,
+#main .imagegird.vertical3 li .have-link {
+  display: block;
+  width: 100%;
+}
+
+#main .imagegird.vertical2 li img,
+#main .imagegird.vertical3 li img {
+  width: 100%;
+}
+
+#main .imagegird.vertical3 li {
+  width: 33.3333%;
+}
+
+.rules img {
+  width: 100%;
+}
+
+/* .button a {
+  border: none;
+  outline: none;
+  background-color: transparent;
+} */
+
+.qrcode img {
+  width: 100%;
+  margin: auto;
+  display: block;
+}
+
+/* a {
+  text-decoration: none;
+} */
+
+/* em,
+i {
+  font-style: normal;
+} */
+
+/* ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+} */
+
+.f-cb {
+  display: block;
+  zoom: 1;
+}
+
+.f-cb:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.f-fl {
+  float: left;
+}
+
+.f-fr {
+  float: right;
+}
+
+.f-hide {
+  display: none;
+}
+
+.f-hide2 {
+  visibility: hidden;
+}
+
+.f-hide3 {
+  position: absolute;
+  left: -99999px;
+  top: -99999px;
+}

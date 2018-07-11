@@ -1,0 +1,23 @@
+<%- include('../common/header.html', {
+    meta: {
+        title:'前端开放平台'
+    },
+    js: [],
+    css: [],
+    bodyClass: 'home blog load'
+}); %>
+  <div class="section">
+  <% if (locals.user) { %>
+    <ul style="
+    max-width: 900px;
+    margin: 0 auto;
+    text-indent: 300px;">
+    <div>用户姓名：<%= user.name %></div>
+    <div>用户邮箱：<%= user.email %></div>
+    <div>用户手机：<%= user.mob %></div>
+    <div>用户权值：<%= user.permission %></div>
+    <div>创建时间：<%= new Date(user.create_time) %></div>
+    </ul>
+  <% } %>
+  </div>
+  <%include ../common/footer.html%>

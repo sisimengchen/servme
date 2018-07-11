@@ -1,0 +1,21 @@
+<%- include('../common/header.html', {
+    meta: {
+        title:'Not Found'
+    },
+    js: [],
+    css: [],
+    bodyClass: 'error404'
+}); %>
+  <div class="section">
+    <div class="inner">
+      <h2 class="sectionTit">PAGE NOT FOUND</h2>
+      <p class="lead center">Error
+        <%= locals.code || "404" %>
+          <%= locals.message || "" %>。
+            <br>请确认URL输入正确。</p>
+      <p class="back">
+        <a href="/" class="sub">返回首页</a>
+      </p>
+    </div>
+  </div>
+  <%include ../common/footer.html%>

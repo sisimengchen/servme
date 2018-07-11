@@ -1,0 +1,330 @@
+<%- include('../common/header.html', {
+    meta: {
+        title:'前端开放平台'
+    },
+    js: [],
+    css: [],
+    bodyClass: 'home blog load'
+}); %>
+  <script>
+    $(function () {
+      var slide = $('.keyvisual .slide');
+      slide.children('li:first-child').addClass('current');
+      setInterval(function () {
+        if (slide.find('.current').is('li:last-child')) {
+          slide.find('li').removeClass('current');
+          slide.find('li:first-child').addClass('current');
+        } else {
+          slide.find('.current').next().addClass('current');
+          slide.find('.current:first').removeClass('current');
+        }
+      }, 6000);
+    });
+
+  </script>
+
+  <div class="keyvisual">
+    <p class="scroll"></p>
+
+    <ul class="slide">
+      <li class="current">
+        <div class="catch">
+          <p class="en">
+            <span class="blockAnime">
+              <span class="blockAnime_inner">NEXT</span>
+            </span>
+            <br>
+            <span class="blockAnime">
+              <span class="blockAnime_inner">INNOVATION</span>
+            </span>
+          </p>
+          <p>
+            <span class="blockAnime">
+              <span class="blockAnime_inner"></span>
+            </span>
+          </p>
+        </div>
+        <div class="ph">
+          <span class="blockAnime">
+            <div class="img" style="background-image:url(/static/index/img/ph_main01.jpg);"></div>
+          </span>
+        </div>
+      </li>
+      <li class="">
+        <div class="catch">
+          <p class="en">
+            <span class="blockAnime">
+              <span class="blockAnime_inner">DEVELOP &amp;</span>
+            </span>
+            <br>
+            <span class="blockAnime">
+              <span class="blockAnime_inner">REDUCTION</span>
+            </span>
+          </p>
+          <p>
+            <span class="blockAnime">
+              <span class="blockAnime_inner"></span>
+            </span>
+          </p>
+        </div>
+        <div class="ph">
+          <span class="blockAnime">
+            <div class="img" style="background-image:url(/static/index/img/ph_main02.jpg);"></div>
+          </span>
+        </div>
+      </li>
+      <li class="">
+        <div class="catch">
+          <p class="en">
+            <span class="blockAnime">
+              <span class="blockAnime_inner">CHALLENGE</span>
+            </span>
+            <br>
+            <span class="blockAnime">
+              <span class="blockAnime_inner">EXCITING</span>
+            </span>
+          </p>
+          <p>
+            <span class="blockAnime">
+              <span class="blockAnime_inner"></span>
+            </span>
+          </p>
+        </div>
+        <div class="ph">
+          <span class="blockAnime">
+            <div class="img" style="background-image:url(/static/index/img/ph_main03.jpg);"></div>
+          </span>
+        </div>
+      </li>
+
+
+    </ul>
+
+    <!-- <ul class="info">
+                <li>
+                    <a href="https://whatever-inc.com/information/web%e3%82%b5%e3%82%a4%e3%83%88%e3%83%aa%e3%83%8b%e3%83%a5%e3%83%bc%e3%82%a2%e3%83%ab%e3%81%ae%e3%81%8a%e7%9f%a5%e3%82%89%e3%81%9b">
+                        <p class="date">
+                            <span class="category">
+                                NEWS </span>
+                            2018年2月20日 </p>
+                        <p class="tit">
+                            Webサイトリニューアルのお知らせ </p>
+                    </a>
+                </li>
+            </ul> -->
+
+  </div>
+  <!-- /.keyvisual -->
+
+  <!-- <div class="section service" id="service">
+
+    <h2 class="sectionTit">SERVICE</h2>
+
+    <div class="segment consulting ">
+      <div class="titleArea">
+        <div class="textBlock">
+          <div class="blockInner">
+            <h3 class="title">
+              <span class="number">
+                <span class="blockAnime">
+                  <span class="blockAnime_inner">01</span>
+                </span>
+              </span>
+              <span class="blockAnime">
+                <span class="blockAnime_inner">Consulting</span>
+              </span>
+            </h3>
+            <p class="text">
+              <span class="blockAnime">
+                <span class="blockAnime_inner">
+                  「時流」×「手法」×「原理原則」
+                  <br> 私たちは、この３つがバランスをとる事が上手くいくビジネスの根本だと考えています。 Whateverは全てのお客様と共に、成功を実現いたします。
+                </span>
+              </span>
+            </p>
+          </div>
+        </div>
+
+        <div class="ph">
+          <img src="/static/index/img/ph_service_consulting.jpg" alt="">
+        </div>
+      </div>
+
+      <ul class="serviceList">
+        <li>
+          <h4>
+            <svg viewBox="0 0 200 200">
+              <title>ビジネスコンサルティング</title>
+              <circle class="st1" cx="13" cy="122" r="10"></circle>
+              <circle class="st1" cx="77.5" cy="50.5" r="10"></circle>
+              <circle class="st1" cx="128.5" cy="89.5" r="10"></circle>
+              <circle class="st1" cx="187.5" cy="12.5" r="10"></circle>
+              <line class="st1" x1="134.7" y1="81.7" x2="183" y2="20"></line>
+              <line class="st1" x1="84.8" y1="57.3" x2="120.8" y2="83.1"></line>
+              <line class="st1" x1="21" y1="116" x2="71" y2="58"></line>
+              <rect x="166" y="100" class="st1" width="31" height="97"></rect>
+              <rect x="116" y="124" class="st1" width="31" height="73"></rect>
+              <rect x="66" y="148" class="st1" width="31" height="49"></rect>
+            </svg> ビジネスコンサルティング
+            <span>Business Consulting</span>
+          </h4>
+          <p class="text">
+            企業が成長していくフェーズ毎に発生する課題を解決します。私たちは現場主義を徹底し、PDCAサイクルをスピーディーに回すことで、集客・収益増、認知醸成、組織拡大など、どの様なニーズにも最適なソリューションを行います。
+          </p>
+        </li>
+        <li>
+          <h4>
+            <svg viewBox="0 0 200 200">
+              <title>プロモーション・マーケティング</title>
+              <rect x="3" y="13" class="st1" width="194" height="137"></rect>
+              <polyline class="st1" points="50,197 99.5,152 150,199 	"></polyline>
+              <circle class="st1" cx="69.5" cy="81.5" r="45.5"></circle>
+              <polyline class="st1" points="70,126.5 70,81.5 107,55.5 	"></polyline>
+              <line class="st1" x1="131.5" y1="122.2" x2="164.7" y2="122.2"></line>
+              <line class="st1" x1="131.5" y1="101.8" x2="174" y2="101.8"></line>
+              <line class="st1" x1="131.5" y1="81.5" x2="174" y2="81.5"></line>
+              <line class="st1" x1="131.5" y1="61.2" x2="174" y2="61.2"></line>
+              <line class="st1" x1="131.5" y1="40.8" x2="157.5" y2="40.8"></line>
+              <line class="st1" x1="100" y1="152" x2="100" y2="199"></line>
+            </svg> プロモーション・マーケティング
+            <span>Promotion &amp; Marketing</span>
+          </h4>
+          <p class="text">
+            データ解析により課題と目標を可視化し、デジタルマーケティング戦略の立案・SEO 対策・インターネット広告・顧客ロイヤルティ向上といった多角的なアプローチでコンバージョンアップのための施策を行い、成果へとつなげます。
+          </p>
+        </li>
+        <li>
+          <h4>
+            <svg viewBox="0 0 200 200">
+              <title>メディア構築・運用</title>
+              <polygon class="st1" points="114.8,152.3 90.1,155.8 93.6,131.1 173.5,51.2 194.7,72.4 	"></polygon>
+              <line class="st1" x1="163.2" y1="62.1" x2="184.4" y2="83.4"></line>
+              <line class="st1" x1="93.9" y1="131.4" x2="114.4" y2="151.9"></line>
+              <polyline class="st2" points="148,77 148,40 112,3 3,3 3,197 148,197 148,120 	"></polyline>
+              <polyline class="st2" points="113,5 113,40 148,40 	"></polyline>
+              <line class="st1" x1="27" y1="171" x2="125" y2="171"></line>
+              <line class="st1" x1="26.5" y1="147.5" x2="92" y2="147.5"></line>
+              <line class="st1" x1="26.5" y1="124" x2="100" y2="124"></line>
+              <line class="st1" x1="26.5" y1="100.5" x2="124.5" y2="100.5"></line>
+              <line class="st1" x1="26.5" y1="77" x2="124.5" y2="77"></line>
+              <line class="st1" x1="26.5" y1="53.5" x2="124.5" y2="53.5"></line>
+              <line class="st1" x1="27" y1="30" x2="87" y2="30"></line>
+            </svg> メディア構築・運用
+            <span>Media Management</span>
+          </h4>
+          <p class="text">
+            商品・サービスの認知拡大する手法として、オウンドメディアを構築します。徹底したインサイトを行い、自社内にライティングチームを組織する事で、改善スピードをあげ、コンバージョンする記事を生成。中長期的な事業成長を実現します。
+          </p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="segment creative">
+      <div class="titleArea">
+        <div class="textBlock">
+          <div class="blockInner">
+            <h3 class="title">
+              <span class="number">
+                <span class="blockAnime">
+                  <span class="blockAnime_inner">02</span>
+                </span>
+              </span>
+              <span class="blockAnime">
+                <span class="blockAnime_inner">Creative</span>
+              </span>
+            </h3>
+            <p class="text">
+              <span class="blockAnime">
+                <span class="blockAnime_inner">
+                  企業の顧客接点はますますデジタル化し、
+                  <br> ウェブはコーポレートアイデンティティを構成する重要な要素となりました。
+                  <br> 私たちは課題解決に向けて価値あるユーザー体験を提供します。
+                </span>
+              </span>
+            </p>
+          </div>
+        </div>
+
+        <div class="ph">
+          <img src="/static/index/img/ph_service_creative.jpg" alt="">
+        </div>
+      </div>
+
+      <ul class="serviceList">
+        <li>
+          <h4>
+            <svg viewBox="0 0 200 200">
+              <title>情報設計</title>
+              <rect x="3" y="19" class="st2" width="194" height="162"></rect>
+              <rect x="22" y="40" class="st1" width="40" height="122"></rect>
+              <rect x="80" y="40" class="st1" width="40" height="61"></rect>
+              <line class="st1" x1="58" y1="41" x2="58" y2="40"></line>
+              <line class="st1" x1="80" y1="162" x2="178" y2="162"></line>
+              <line class="st1" x1="80" y1="141.7" x2="178" y2="141.7"></line>
+              <line class="st1" x1="80" y1="121.3" x2="178" y2="121.3"></line>
+              <line class="st1" x1="138" y1="101" x2="178" y2="101"></line>
+              <line class="st1" x1="138" y1="80.7" x2="178" y2="80.7"></line>
+              <line class="st1" x1="138" y1="60.3" x2="178" y2="60.3"></line>
+              <line class="st1" x1="138" y1="40" x2="178" y2="40"></line>
+            </svg> 情報設計
+            <span>Information Arcitect</span>
+          </h4>
+          <p class="text">
+            情報構造の整理やナビゲーション設計、ターゲットユーザーのシナリオ設計、コンテンツ企画や導線設計まで、WebサイトのSEOパフォーマンスを土台から改善し、ユーザーがストレスなく目的に到達するための構造設計を行います。
+          </p>
+        </li>
+        <li>
+          <h4>
+            <svg viewBox="0 0 200 200">
+              <title>UI / UX デザイン</title>
+              <circle class="st1" cx="29" cy="188.5" r="1"></circle>
+              <rect x="3" y="109.4" class="st1" width="52" height="87.6"></rect>
+              <polyline class="st1" points="16,107.4 16,20 197,20 197,146 55,146 	"></polyline>
+              <line class="st1" x1="3" y1="124" x2="55" y2="124"></line>
+              <line class="st1" x1="3" y1="180" x2="55" y2="180"></line>
+              <line class="st1" x1="197" y1="125" x2="58" y2="125"></line>
+              <rect x="84" y="146" class="st3" width="45" height="29"></rect>
+              <line class="st3" x1="65" y1="175" x2="148" y2="175"></line>
+            </svg> UI / UX デザイン
+            <span>UI / UX Design</span>
+          </h4>
+          <p class="text">
+            100点満点のユーザビリティが100点満点のユーザーの満足を得られとは限りません。目的やターゲットといった上流工程からデザインのあるべき姿を導き、ユーザビリティを超えた価値と体験を提供します。
+          </p>
+        </li>
+        <li>
+          <h4>
+            <svg viewBox="0 0 200 200">
+              <title>Web開発・システム構築</title>
+              <rect x="3" y="19" class="st2" width="194" height="161"></rect>
+              <line class="st1" x1="3" y1="57" x2="197" y2="57"></line>
+              <circle class="st1" cx="27" cy="38" r="8"></circle>
+              <circle class="st1" cx="54" cy="38" r="8"></circle>
+              <circle class="st1" cx="80" cy="38" r="8"></circle>
+              <polyline class="st1" points="20,73 42,90 20,107 	"></polyline>
+              <line class="st1" x1="42" y1="107" x2="69" y2="107"></line>
+            </svg>Web開発・システム構築
+            <span>Web Development</span>
+          </h4>
+          <p class="text">
+            デバイスの特徴に合わせたインタラクションの設計とパフォーマンスの最適化を行います。また、担当者さまの業務のプロセスに合わせたCMS構築により持続可能な運用体制作りまでをサポートします。
+          </p>
+        </li>
+      </ul>
+
+    </div>
+
+  </div> -->
+  <!-- /.service -->
+
+
+  <!-- <div class="section contact">
+    <p class="lead">お仕事のご依頼やお見積もりなど
+      <br class="sp">お気軽にご相談ください。</p>
+    <p class="btn">
+      <a href="/contact" class="main">CONTACT</a>
+    </p>
+  </div> -->
+  <!-- /.contact -->
+
+  <%include ../common/footer.html%>

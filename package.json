@@ -1,0 +1,53 @@
+{
+  "name": "servme",
+  "version": "1.0.0",
+  "description": "servme",
+  "browserslist": [
+    "> 0.1%",
+    "last 10 versions",
+    "not ie <= 8"
+  ],
+  "author": "mengchen",
+  "scripts": {
+    "init": "npm install",
+    "server": "export NODE_ENV=development && node ./bin/startup.js",
+    "dev": "pm2 restart process.config.js --env development",
+    "test": "npm run clean && npm run init && pm2 restart process.config.js --env test",
+    "release": "npm run clean && npm run init && pm2 restart process.config.js --env production",
+    "stop": "pm2 stop process.config.js",
+    "delete": "pm2 delete process.config.js",
+    "clean": "rm -rf node_modules && rm -rf ./package-lock.json && npm cache clean --force",
+    "ftp": "node ./src/common/ftp.js",
+    "grab": "node ./src/spider/rate/boc.js"
+  },
+  "dependencies": {
+    "async": "^2.6.0",
+    "cheerio": "^1.0.0-rc.2",
+    "concurrency-logger": "^2.0.1",
+    "ejs": "^2.5.7",
+    "fs-extra": "^5.0.0",
+    "ftp": "^0.3.10",
+    "html-minifier": "^3.5.9",
+    "imagemin": "^5.3.1",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-pngquant": "^5.0.1",
+    "koa": "^2.5.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-favicon": "^2.0.0",
+    "koa-jwt": "^3.3.1",
+    "koa-logger": "^3.1.0",
+    "koa-multer": "^1.0.2",
+    "koa-router": "^7.4.0",
+    "koa-static-cache": "^5.1.2",
+    "koa-views": "^6.1.3",
+    "log4js": "^2.5.3",
+    "mongoose": "^5.0.7",
+    "node-dir": "^0.1.17",
+    "socket.io": "^2.0.4",
+    "uglify-js": "^3.3.12",
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.18.1",
+    "eslint-config-lmfe": "0.0.1",
+    "eslint-config-standard": "^11.0.0"
+  }
+}
