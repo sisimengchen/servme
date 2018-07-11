@@ -8,7 +8,7 @@
 ### Installation
 
 ```shell
-$ git clone https://git.easecreate.com/lmpj/feserver.git
+$ git clone https://github.com/sisimengchen/servme.git
 $ npm install pm2 -g
 $ cd feserver && npm run init
 ```
